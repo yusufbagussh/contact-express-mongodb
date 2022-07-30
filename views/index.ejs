@@ -1,0 +1,12 @@
+<h1>Web Server NodeJS</h1>
+<h2>Selamat Datang <%= nama %></h2>
+<h4>Daftar Mahasiswa Anda</h4>
+<!-- cek apakah ada data array pada variabel mahasiswa -->
+<% if(mahasiswa.length < 1) { %>
+<p>Data Mahasiswa Anda masih kosing</p>
+<% } else { %> <% mahasiswa.forEach(mhs => { %>
+<ul>
+  <li>Nama : <%=mhs.nama%></li>
+  <li>Nama : <%=mhs.email%></li>
+</ul>
+<% }); %> <% } %>
